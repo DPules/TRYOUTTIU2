@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hasil Ujian</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background:
+          linear-gradient(rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.94)),
+          url("img/logo-dppi_20251220_232237_0000.png");
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .result-card {
+        background: white;
+        width: 100%;
+        max-width: 420px;
+        padding: 30px 25px;
+        border-radius: 18px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        animation: fadeIn 0.6s ease;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .logo {
+        width: 90px;
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        font-family: "Poppins", sans-serif;
+        color: #b00000;
+        margin-bottom: 5px;
+      }
+
+      .sub {
+        font-size: 14px;
+        color: #777;
+        margin-bottom: 25px;
+      }
+
+      .data {
+        text-align: left;
+        margin-bottom: 20px;
+      }
+
+      .data div {
+        margin-bottom: 8px;
+        font-size: 15px;
+      }
+
+      .data span {
+        font-weight: 600;
+        color: #333;
+      }
+
+      .score-box {
+        background: linear-gradient(135deg, #c00000, #ff3b3b);
+        color: white;
+        border-radius: 16px;
+        padding: 20px 10px;
+        margin: 20px 0;
+      }
+
+      .score-box small {
+        font-size: 14px;
+        opacity: 0.9;
+      }
+
+      .score {
+        font-family: "Poppins", sans-serif;
+        font-size: 48px;
+        font-weight: 700;
+        margin-top: 5px;
+      }
+
+      .note {
+        font-size: 14px;
+        color: #555;
+        margin-top: 15px;
+      }
+
+      .footer {
+        margin-top: 25px;
+        font-size: 13px;
+        color: #888;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="result-card">
+      <!-- LOGO / ICON -->
+      <img
+        src="img/Paskibra Logo - Logo Vector Online 2019.jfif"
+        class="logo"
+        alt="Garuda"
+      />
+
+      <h2>Hasil Ujian TWK</h2>
+      <div class="sub">Simulasi Seleksi Paskibraka</div>
+
+      <!-- DATA PESERTA -->
+      <div class="data">
+        <div>Nama: <span id="n"></span></div>
+        <div>Sekolah: <span id="s"></span></div>
+        <div>Kab/Kota: <span id="d"></span></div>
+      </div>
+
+      <!-- NILAI -->
+      <div class="score-box">
+        <small>Nilai Akhir</small>
+        <div class="score" id="v">0</div>
+      </div>
+
+      <div class="note">
+        Terima kasih telah mengikuti ujian.<br />
+        Tetap junjung tinggi nilai Pancasila dan nasionalisme
+      </div>
+
+      <div class="footer">TRYOUT TWK Paskibraka</div>
+    </div>
+
+    <script>
+      document.getElementById("n").textContent =
+        localStorage.getItem("nama") || "-";
+
+      document.getElementById("s").textContent =
+        localStorage.getItem("sekolah") || "-";
+
+      document.getElementById("d").textContent =
+        localStorage.getItem("daerah") || "-";
+
+      document.getElementById("v").textContent =
+        localStorage.getItem("nilai") || "0";
+    </script>
+  </body>
+</html>
