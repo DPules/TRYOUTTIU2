@@ -11,136 +11,129 @@ let jawaban = {};
 
 const soal = [
   {
-    t: "Mobil : Bensin = Manusia : ...",
-    p: ["Pakaian", "Tidur", "Makanan", "Napas", "Tenaga"],
-    j: 2
+    t: 'Sinonim kata "AKURAT" adalah ....',
+    p: ["Cepat", "Tepat", "Rinci", "Cermat", "Lengkap"],
+    j: 1,
   },
   {
-    t: "Guru : Sekolah = Dokter : ...",
-    p: ["Pasien", "Rumah", "Rumah Sakit", "Obat", "Perawat"],
-    j: 2
+    t: 'Antonim kata "ABSTRAK" adalah ....',
+    p: ["Konkret", "Nyata", "Umum", "Ilmiah", "Luas"],
+    j: 0,
   },
   {
-    t: "Semua Paskibraka harus sehat. Andi adalah Paskibraka. Maka ...",
-    p: ["Andi belum tentu sehat", "Andi sehat", "Andi sakit", "Andi atlet", "Tidak dapat disimpulkan"],
-    j: 1
+    t: "Pedas : Cabai = Manis : ...",
+    p: ["Gula", "Madu", "Teh", "Sirup", "Buah"],
+    j: 0,
   },
   {
-    t: "Hasil dari 18 − 6 × 2 + 4 adalah ....",
-    p: ["4", "6", "10", "14", "16"],
-    j: 2
+    t: "Hasil dari 45 − (18 : 3) × 4 adalah ....",
+    p: ["9", "15", "21", "27", "33"],
+    j: 2,
   },
   {
-    t: "Jika 5 orang menyelesaikan pekerjaan dalam 12 hari, maka 10 orang menyelesaikan pekerjaan yang sama dalam ... hari.",
-    p: ["4", "5", "6", "8", "10"],
-    j: 2
+    t: "Jika 12 siswa dapat menyelesaikan tugas dalam 10 hari, maka 8 siswa akan menyelesaikan tugas yang sama dalam ... hari.",
+    p: ["12", "14", "15", "18", "20"],
+    j: 2,
   },
   {
-    t: "Lanjutkan deret angka berikut: 2, 5, 9, 14, 20, ...",
-    p: ["25", "26", "27", "28", "30"],
-    j: 2
+    t: "Lanjutkan deret angka: 1, 4, 9, 16, 25, ...",
+    p: ["30", "32", "35", "36", "49"],
+    j: 3,
   },
   {
-    t: "A, C, F, J, O, ...",
-    p: ["T", "U", "V", "W", "X"],
-    j: 1
+    t: "Z, X, U, Q, L, ...",
+    p: ["H", "I", "J", "K", "M"],
+    j: 0,
   },
   {
-    t: "Jika ▲ = 3, ○ = 5, dan ■ = 7, maka ▲ + ○ × ■ = ...",
-    p: ["38", "40", "42", "44", "46"],
-    j: 2
+    t: "Jika x = 4 dan y = 6, maka nilai dari 3x + 2y adalah ....",
+    p: ["18", "20", "22", "24", "26"],
+    j: 2,
   },
   {
-    t: "Semua siswa rajin. Sebagian siswa adalah atlet. Kesimpulan yang tepat adalah ...",
+    t: "Semua pegawai disiplin. Sebagian pegawai adalah atlet. Kesimpulan yang tepat adalah ....",
     p: [
-      "Semua atlet rajin",
-      "Sebagian atlet rajin",
-      "Semua rajin adalah atlet",
-      "Tidak ada atlet yang rajin",
-      "Tidak dapat disimpulkan"
+      "Semua atlet disiplin",
+      "Sebagian atlet disiplin",
+      "Semua disiplin atlet",
+      "Tidak ada atlet disiplin",
+      "Tidak dapat disimpulkan",
     ],
-    j: 1
+    j: 1,
   },
   {
-    t: "Jika hari ini hari Senin, maka 17 hari kemudian adalah hari ...",
-    p: ["Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"],
-    j: 2
+    t: "Jika hari ini hari Sabtu, maka 100 hari kemudian adalah hari ....",
+    p: ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
+    j: 2,
   },
   {
-    t: "Lanjutkan deret angka: 100, 95, 85, 70, ...",
-    p: ["50", "55", "60", "65", "75"],
-    j: 2
+    t: "Sebuah persegi memiliki keliling 48 cm. Panjang sisi persegi tersebut adalah ....",
+    p: ["10", "11", "12", "13", "14"],
+    j: 2,
   },
   {
-    t: "Buku : Membaca = Pisau : ...",
-    p: ["Tajam", "Dapur", "Memotong", "Besi", "Bahaya"],
-    j: 2
+    t: "Air : Haus = Makanan : ...",
+    p: ["Lapar", "Kenyang", "Lezat", "Gizi", "Sehat"],
+    j: 0,
   },
   {
-    t: "Hasil dari (−12) + 4 × 5 − 8 adalah ....",
-    p: ["0", "2", "4", "6", "8"],
-    j: 2
+    t: "Nilai dari 2³ + 3² − 5 adalah ....",
+    p: ["8", "10", "12", "14", "16"],
+    j: 1,
   },
   {
-    t: "Jika 3 kg beras seharga Rp36.000, maka harga 5 kg beras adalah ...",
+    t: "Jika sebuah mobil menempuh jarak 180 km dalam 3 jam, maka kecepatan mobil tersebut adalah ... km/jam.",
+    p: ["40", "50", "60", "70", "80"],
+    j: 2,
+  },
+  {
+    t: "Pilih pasangan kata yang hubungannya SAMA dengan: Dokter : Pasien",
     p: [
-      "Rp50.000",
-      "Rp55.000",
-      "Rp60.000",
-      "Rp65.000",
-      "Rp70.000"
+      "Guru : Murid",
+      "Petani : Sawah",
+      "Nelayan : Laut",
+      "Pilot : Pesawat",
+      "Koki : Dapur",
     ],
-    j: 2
+    j: 0,
   },
   {
-    t: "Pilih pasangan kata yang HUBUNGANNYA SAMA dengan: Panas : Api",
+    t: "Lanjutkan deret angka: 5, 11, 19, 29, ...",
+    p: ["37", "39", "41", "43", "45"],
+    j: 3,
+  },
+  {
+    t: "Jika semua A adalah B dan sebagian B adalah C, maka ...",
     p: [
-      "Terang : Matahari",
-      "Asap : Api",
-      "Air : Hujan",
-      "Hitam : Arang",
-      "Basah : Air"
-    ],
-    j: 0
-  },
-  {
-    t: "Lanjutkan pola: 1, 1, 2, 3, 5, 8, ...",
-    p: ["11", "12", "13", "14", "15"],
-    j: 2
-  },
-  {
-    t: "Jika semua A adalah B dan semua B adalah C, maka ...",
-    p: [
-      "Sebagian A adalah C",
       "Semua A adalah C",
-      "Sebagian C adalah A",
+      "Sebagian A mungkin C",
+      "Semua C adalah A",
       "Tidak ada A yang C",
-      "Tidak dapat disimpulkan"
+      "Tidak dapat ditarik kesimpulan",
     ],
-    j: 1
+    j: 1,
   },
   {
-    t: "Jam menunjukkan pukul 03.15. Sudut antara jarum jam adalah ...",
-    p: ["0°", "7,5°", "15°", "22,5°", "30°"],
-    j: 3
+    t: "Jam menunjukkan pukul 09.00. Sudut terkecil antara jarum jam adalah ....",
+    p: ["45°", "60°", "90°", "120°", "135°"],
+    j: 2,
   },
   {
-    t: "Jika 8 mesin menghasilkan 400 barang dalam 5 jam, maka 4 mesin menghasilkan 200 barang dalam ... jam.",
-    p: ["5", "6", "7", "8", "10"],
-    j: 0
+    t: "Jika peluang hujan hari ini adalah 0,2 maka peluang tidak hujan adalah ....",
+    p: ["0,2", "0,4", "0,6", "0,8", "1"],
+    j: 3,
   },
   {
-    t: "Anton lebih tinggi dari Budi, Budi lebih tinggi dari Candra. Maka ...",
+    t: "Rudi lebih berat dari Tono, tetapi lebih ringan dari Bayu. Maka ...",
     p: [
-      "Candra lebih tinggi dari Anton",
-      "Anton paling pendek",
-      "Anton lebih tinggi dari Candra",
-      "Budi paling tinggi",
-      "Tidak dapat disimpulkan"
+      "Bayu paling berat",
+      "Tono paling berat",
+      "Rudi paling berat",
+      "Tono lebih berat dari Bayu",
+      "Tidak dapat disimpulkan",
     ],
-    j: 2
-  }
-
+    j: 0,
+  },
 ];
 
 function mulaiUjian() {
