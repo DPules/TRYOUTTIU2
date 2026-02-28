@@ -1,6 +1,6 @@
 const API_URL =
-  "https://script.google.com/macros/s/AKfycbzBcco1PFPknGebmk2NSlp1gm-1PQRHT9Scwz8TiNtksMeZ46Nx3FXQwxd8lur3UOVR/exec";
-const perHalaman = 3;
+  "https://script.google.com/macros/s/AKfycbxdo9U5auaAoMLFOoY7zov8GKwlBsfqvinXtNk47aVBz4EBzp4qySdDvVHaLPhUzQrzrg/exec";
+const perHalaman = 1;
 let waktu = 1800;
 
 let halaman = 0;
@@ -11,128 +11,110 @@ let jawaban = {};
 
 const soal = [
   {
-    t: 'Sinonim kata "AKURAT" adalah ....',
-    p: ["Cepat", "Tepat", "Rinci", "Cermat", "Lengkap"],
+    t: "Merah + Kuning menghasilkan warna ....",
+    p: ["Hijau", "Oranye", "Ungu", "Coklat", "Biru"],
     j: 1,
   },
   {
-    t: 'Antonim kata "ABSTRAK" adalah ....',
-    p: ["Konkret", "Nyata", "Umum", "Ilmiah", "Luas"],
-    j: 0,
-  },
-  {
-    t: "Pedas : Cabai = Manis : ...",
-    p: ["Gula", "Madu", "Teh", "Sirup", "Buah"],
-    j: 0,
-  },
-  {
-    t: "Hasil dari 45 − (18 : 3) × 4 adalah ....",
-    p: ["9", "15", "21", "27", "33"],
+    t: "Api : Panas = Es : ....",
+    p: ["Air", "Beku", "Dingin", "Cair", "Basah"],
     j: 2,
   },
   {
-    t: "Jika 12 siswa dapat menyelesaikan tugas dalam 10 hari, maka 8 siswa akan menyelesaikan tugas yang sama dalam ... hari.",
-    p: ["12", "14", "15", "18", "20"],
-    j: 2,
-  },
-  {
-    t: "Lanjutkan deret angka: 1, 4, 9, 16, 25, ...",
-    p: ["30", "32", "35", "36", "49"],
-    j: 3,
-  },
-  {
-    t: "Z, X, U, Q, L, ...",
-    p: ["H", "I", "J", "K", "M"],
+    t: "Sepatu : Kaki = Sarung tangan : ....",
+    p: ["Tangan", "Dingin", "Jari", "Kulit", "Baju"],
     j: 0,
   },
   {
-    t: "Jika x = 4 dan y = 6, maka nilai dari 3x + 2y adalah ....",
-    p: ["18", "20", "22", "24", "26"],
+    t: "3, 6, 9, 12, ....",
+    p: ["14", "15", "16", "18", "20"],
+    j: 1,
+  },
+  {
+    t: "5, 10, 20, 40, ....",
+    p: ["60", "70", "80", "90", "100"],
     j: 2,
   },
   {
-    t: "Semua pegawai disiplin. Sebagian pegawai adalah atlet. Kesimpulan yang tepat adalah ....",
+    t: "A, C, E, G, ....",
+    p: ["H", "I", "J", "K", "L"],
+    j: 1,
+  },
+  {
+    t: "Jika semua siswa harus disiplin dan Andi adalah siswa, maka ....",
     p: [
-      "Semua atlet disiplin",
-      "Sebagian atlet disiplin",
-      "Semua disiplin atlet",
-      "Tidak ada atlet disiplin",
+      "Andi belum tentu disiplin",
+      "Andi disiplin",
+      "Andi tidak disiplin",
+      "Andi bukan siswa",
       "Tidak dapat disimpulkan",
     ],
     j: 1,
   },
   {
-    t: "Jika hari ini hari Sabtu, maka 100 hari kemudian adalah hari ....",
-    p: ["Senin", "Selasa", "Rabu", "Kamis", "Jumat"],
-    j: 2,
-  },
-  {
-    t: "Sebuah persegi memiliki keliling 48 cm. Panjang sisi persegi tersebut adalah ....",
-    p: ["10", "11", "12", "13", "14"],
-    j: 2,
-  },
-  {
-    t: "Air : Haus = Makanan : ...",
-    p: ["Lapar", "Kenyang", "Lezat", "Gizi", "Sehat"],
-    j: 0,
-  },
-  {
-    t: "Nilai dari 2³ + 3² − 5 adalah ....",
-    p: ["8", "10", "12", "14", "16"],
+    t: "1 lusin sama dengan ....",
+    p: ["10", "12", "14", "15", "20"],
     j: 1,
   },
   {
-    t: "Jika sebuah mobil menempuh jarak 180 km dalam 3 jam, maka kecepatan mobil tersebut adalah ... km/jam.",
-    p: ["40", "50", "60", "70", "80"],
-    j: 2,
-  },
-  {
-    t: "Pilih pasangan kata yang hubungannya SAMA dengan: Dokter : Pasien",
-    p: [
-      "Guru : Murid",
-      "Petani : Sawah",
-      "Nelayan : Laut",
-      "Pilot : Pesawat",
-      "Koki : Dapur",
-    ],
-    j: 0,
-  },
-  {
-    t: "Lanjutkan deret angka: 5, 11, 19, 29, ...",
-    p: ["37", "39", "41", "43", "45"],
-    j: 3,
-  },
-  {
-    t: "Jika semua A adalah B dan sebagian B adalah C, maka ...",
-    p: [
-      "Semua A adalah C",
-      "Sebagian A mungkin C",
-      "Semua C adalah A",
-      "Tidak ada A yang C",
-      "Tidak dapat ditarik kesimpulan",
-    ],
+    t: "Jam menunjukkan pukul 03.00. Sudut jarum jam adalah ....",
+    p: ["45°", "90°", "120°", "150°", "180°"],
     j: 1,
   },
   {
-    t: "Jam menunjukkan pukul 09.00. Sudut terkecil antara jarum jam adalah ....",
-    p: ["45°", "60°", "90°", "120°", "135°"],
+    t: "Jika 1 hari = 24 jam, maka 3 hari = .... jam",
+    p: ["48", "60", "72", "84", "96"],
     j: 2,
   },
   {
-    t: "Jika peluang hujan hari ini adalah 0,2 maka peluang tidak hujan adalah ....",
-    p: ["0,2", "0,4", "0,6", "0,8", "1"],
+    t: "Mobil : Roda = Pesawat : ....",
+    p: ["Sayap", "Mesin", "Pilot", "Bandara", "Udara"],
+    j: 0,
+  },
+  {
+    t: "Air dipanaskan akan ....",
+    p: ["Membeku", "Menguap", "Mengeras", "Mencair", "Menghilang"],
+    j: 1,
+  },
+  {
+    t: "10, 9, 8, 7, ....",
+    p: ["6", "5", "4", "3", "2"],
+    j: 0,
+  },
+  {
+    t: "Jika harga 1 buku Rp2.000, maka harga 5 buku adalah ....",
+    p: ["Rp8.000", "Rp9.000", "Rp10.000", "Rp11.000", "Rp12.000"],
+    j: 2,
+  },
+  {
+    t: "Padi : Beras : Nasi = Gandum : Tepung : ....",
+    p: ["Roti", "Kue", "Mie", "Biskuit", "Donat"],
+    j: 0,
+  },
+  {
+    t: "2, 4, 8, 16, ....",
+    p: ["18", "20", "24", "32", "36"],
     j: 3,
   },
   {
-    t: "Rudi lebih berat dari Tono, tetapi lebih ringan dari Bayu. Maka ...",
-    p: [
-      "Bayu paling berat",
-      "Tono paling berat",
-      "Rudi paling berat",
-      "Tono lebih berat dari Bayu",
-      "Tidak dapat disimpulkan",
-    ],
+    t: "Jika hari ini Senin, maka 2 hari lagi adalah ....",
+    p: ["Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"],
+    j: 1,
+  },
+  {
+    t: "Burung : Terbang = Ikan : ....",
+    p: ["Berenang", "Melompat", "Berjalan", "Menyelam", "Terbang"],
     j: 0,
+  },
+  {
+    t: "Benda yang tidak termasuk kelompoknya adalah ....",
+    p: ["Meja", "Kursi", "Lemari", "Piring", "Rak"],
+    j: 3,
+  },
+  {
+    t: "Jika 20 : 4 = 5 maka 30 : 5 = ....",
+    p: ["5", "6", "7", "8", "9"],
+    j: 1,
   },
 ];
 
@@ -252,6 +234,8 @@ function kirim() {
   const nilai = Math.round((benar / soal.length) * 100);
 
   localStorage.setItem("nilai", nilai);
+  localStorage.setItem("jawabanUser", JSON.stringify(jawaban));
+  localStorage.setItem("bankSoal", JSON.stringify(soal));
 
   const fd = new FormData();
   fd.append("nama", localStorage.getItem("nama"));
