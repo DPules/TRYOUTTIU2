@@ -11,128 +11,140 @@ let jawaban = {};
 
 const soal = [
   {
-    t: "2, 6, 7, 21, 22, 66, ....",
-    p: ["67", "68", "70", "72", "75"],
+    t: "Kritik : Evaluasi = Diagnosis : ....",
+    p: ["Analisis", "Pemeriksaan", "Pengobatan", "Penyakit", "Terapi"],
+    j: 2,
+  },
+  {
+    t: "Fotosintesis : Tumbuhan = Respirasi : ....",
+    p: ["Manusia", "Hewan", "Makhluk hidup", "Oksigen", "Sel"],
+    j: 2,
+  },
+  {
+    t: "Konstitusi : Negara = Anggaran Dasar : ....",
+    p: ["Organisasi", "Perusahaan", "Pemerintah", "Rakyat", "Lembaga"],
     j: 0,
   },
   {
-    t: "3, 5, 9, 17, 33, ....",
-    p: ["49", "57", "60", "65", "69"],
+    t: "Baterai : Energi = Paru-paru : ....",
+    p: ["Udara", "Oksigen", "Pernapasan", "Darah", "Hidup"],
+    j: 1,
+  },
+
+  /* ================= DERET ANGKA (POLA KOMBINASI) ================= */
+
+  {
+    t: "2, 5, 11, 23, 47, ....",
+    p: ["90", "92", "94", "95", "97"],
     j: 3,
   },
   {
-    t: "Jika semua anggota tim A disiplin dan sebagian anggota tim A adalah siswa, maka ....",
+    t: "4, 6, 9, 13, 18, ....",
+    p: ["22", "23", "24", "25", "26"],
+    j: 2,
+  },
+  {
+    t: "3, 9, 8, 24, 23, 69, ....",
+    p: ["66", "67", "68", "70", "72"],
+    j: 1,
+  },
+  {
+    t: "1, 4, 10, 19, 31, ....",
+    p: ["40", "42", "44", "46", "48"],
+    j: 1,
+  },
+
+  /* ================= LOGIKA (SILOGISME BERTINGKAT) ================= */
+
+  {
+    t: "Semua mahasiswa rajin. Sebagian mahasiswa atlet. Semua atlet disiplin. Maka ....",
     p: [
-      "Semua siswa disiplin",
-      "Sebagian siswa disiplin",
-      "Tidak ada siswa disiplin",
-      "Semua siswa anggota tim A",
+      "Sebagian mahasiswa disiplin",
+      "Semua mahasiswa disiplin",
+      "Tidak ada mahasiswa disiplin",
+      "Semua disiplin mahasiswa",
+      "Tidak dapat disimpulkan",
+    ],
+    j: 0,
+  },
+  {
+    t: "Semua A adalah B. Sebagian B adalah C. Sebagian C adalah D. Maka ....",
+    p: [
+      "Sebagian A adalah D",
+      "A mungkin D",
+      "Semua A adalah D",
+      "Tidak ada A adalah D",
       "Tidak dapat disimpulkan",
     ],
     j: 1,
   },
   {
-    t: "Nilai dari (48 : 6) × (5 + 7) − 20 adalah ....",
-    p: ["60", "72", "76", "80", "96"],
-    j: 2,
-  },
-  {
-    t: "Jika x + 2y = 14 dan x = 6 maka nilai y adalah ....",
-    p: ["2", "3", "4", "5", "6"],
-    j: 2,
-  },
-  {
-    t: "8, 12, 18, 26, 36, ....",
-    p: ["44", "46", "48", "50", "52"],
-    j: 2,
-  },
-  {
-    t: "Semua dokter adalah sarjana. Sebagian sarjana adalah peneliti. Maka ....",
+    t: "Jika lampu menyala maka listrik aktif. Listrik aktif. Maka ....",
     p: [
-      "Sebagian dokter peneliti",
-      "Semua dokter peneliti",
-      "Tidak ada dokter peneliti",
-      "Sebagian dokter mungkin peneliti",
-      "Semua peneliti dokter",
-    ],
-    j: 3,
-  },
-  {
-    t: "Jika sebuah pekerjaan dapat diselesaikan 6 orang dalam 10 hari, maka 5 orang akan menyelesaikannya dalam .... hari",
-    p: ["10", "11", "12", "13", "14"],
-    j: 2,
-  },
-  {
-    t: "A, D, H, M, S, ....",
-    p: ["X", "Y", "Z", "W", "V"],
-    j: 0,
-  },
-  {
-    t: "Perbandingan umur Andi dan Budi adalah 3 : 5. Jika umur Andi 18 tahun, maka umur Budi adalah ....",
-    p: ["25", "28", "30", "32", "35"],
-    j: 2,
-  },
-  {
-    t: "Jika hari ini Rabu, maka 75 hari lagi adalah ....",
-    p: ["Kamis", "Jumat", "Sabtu", "Minggu", "Senin"],
-    j: 0,
-  },
-  {
-    t: "Nilai dari 2³ + 3³ + 4² adalah ....",
-    p: ["35", "43", "51", "59", "67"],
-    j: 1,
-  },
-  {
-    t: "4, 9, 19, 39, 79, ....",
-    p: ["120", "140", "159", "160", "162"],
-    j: 2,
-  },
-  {
-    t: "Jika semua A adalah B dan semua B adalah C maka ....",
-    p: [
-      "Sebagian A adalah C",
-      "Semua A adalah C",
-      "Tidak ada A adalah C",
-      "Sebagian C adalah A",
+      "Lampu pasti menyala",
+      "Lampu mungkin menyala",
+      "Lampu tidak menyala",
+      "Listrik tidak aktif",
       "Tidak dapat disimpulkan",
     ],
     j: 1,
   },
   {
-    t: "Sebuah mobil menempuh jarak 240 km dalam 4 jam. Jika kecepatannya ditambah 20 km/jam, waktu yang diperlukan untuk menempuh jarak yang sama adalah ....",
-    p: ["2 jam", "2,5 jam", "3 jam", "3,5 jam", "4 jam"],
+    t: "Semua pegawai disiplin. Tidak semua disiplin tepat waktu. Maka ....",
+    p: [
+      "Semua pegawai tepat waktu",
+      "Sebagian pegawai tidak tepat waktu",
+      "Tidak ada pegawai tepat waktu",
+      "Semua tepat waktu pegawai",
+      "Tidak dapat disimpulkan",
+    ],
+    j: 4,
+  },
+
+  /* ================= ARITMATIKA (MULTI STEP) ================= */
+
+  {
+    t: "Nilai dari (36 ÷ 6) × (8 + 4) − 10 adalah ....",
+    p: ["50", "56", "60", "62", "66"],
     j: 2,
   },
   {
-    t: "Deret huruf berikut: B, E, I, N, T, ....",
-    p: ["Y", "Z", "X", "W", "V"],
-    j: 0,
-  },
-  {
-    t: "Jika harga sebuah barang setelah diskon 20% menjadi Rp80.000, maka harga sebelum diskon adalah ....",
-    p: ["Rp90.000", "Rp95.000", "Rp100.000", "Rp110.000", "Rp120.000"],
+    t: "Jika 3x + 2 = 20 maka nilai x adalah ....",
+    p: ["4", "5", "6", "7", "8"],
     j: 2,
   },
   {
-    t: "7, 14, 28, 56, 112, ....",
-    p: ["124", "168", "196", "224", "256"],
+    t: "Harga sebuah barang setelah diskon 25% adalah Rp150.000. Harga sebelum diskon adalah ....",
+    p: ["Rp180.000", "Rp190.000", "Rp200.000", "Rp210.000", "Rp220.000"],
+    j: 2,
+  },
+  {
+    t: "Sebuah mobil menempuh 180 km dalam 3 jam. Jika kecepatannya bertambah 20 km/jam, waktu untuk menempuh jarak yang sama adalah ....",
+    p: ["1,8 jam", "2 jam", "2,25 jam", "2,5 jam", "3 jam"],
+    j: 2,
+  },
+
+  /* ================= PENALARAN KUANTITATIF & PENGETAHUAN DASAR ================= */
+
+  {
+    t: "Jika peluang hujan hari ini 0,3 maka peluang tidak hujan adalah ....",
+    p: ["0,3", "0,5", "0,6", "0,7", "0,8"],
     j: 3,
   },
   {
-    t: "Semua atlet sehat. Tidak semua orang sehat adalah atlet. Maka ....",
-    p: [
-      "Semua orang sehat atlet",
-      "Sebagian orang sehat bukan atlet",
-      "Tidak ada atlet sehat",
-      "Semua atlet bukan sehat",
-      "Tidak dapat disimpulkan",
-    ],
-    j: 1,
+    t: "Sudut terkecil antara jarum jam pada pukul 04.00 adalah ....",
+    p: ["90°", "100°", "110°", "120°", "130°"],
+    j: 3,
   },
   {
-    t: "Nilai dari √144 + √81 adalah ....",
-    p: ["21", "22", "23", "24", "25"],
-    j: 0,
+    t: "Jumlah sudut dalam segitiga adalah ....",
+    p: ["90°", "120°", "180°", "270°", "360°"],
+    j: 2,
+  },
+  {
+    t: "Bilangan prima setelah 29 adalah ....",
+    p: ["30", "31", "33", "35", "37"],
+    j: 1,
   },
 ];
 
