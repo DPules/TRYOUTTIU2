@@ -11,140 +11,284 @@ let jawaban = {};
 
 const soal = [
   {
-    t: "Kritik : Evaluasi = Diagnosis : ....",
-    p: ["Analisis", "Pemeriksaan", "Pengobatan", "Penyakit", "Terapi"],
+    t: "5, 9, 17, 33, ...",
+    p: ["49", "57", "65", "97"],
     j: 2,
   },
   {
-    t: "Fotosintesis : Tumbuhan = Respirasi : ....",
-    p: ["Manusia", "Hewan", "Makhluk hidup", "Oksigen", "Sel"],
+    t: "2, 4, 8, 16, ...",
+    p: ["20", "24", "30", "32"],
+    j: 3,
+  },
+  {
+    t: "Jika x + 5 = 12 maka x = ...",
+    p: ["5", "6", "7", "8"],
     j: 2,
   },
   {
-    t: "Konstitusi : Negara = Anggaran Dasar : ....",
-    p: ["Organisasi", "Perusahaan", "Pemerintah", "Rakyat", "Lembaga"],
+    t: "20% dari 250 adalah ...",
+    p: ["40", "45", "50", "55"],
+    j: 2,
+  },
+  {
+    t: "Jika 3 pekerja menyelesaikan pekerjaan dalam 12 hari, maka 6 pekerja menyelesaikan dalam ...",
+    p: ["3 hari", "4 hari", "5 hari", "6 hari"],
+    j: 3,
+  },
+  {
+    t: "Semua siswa rajin belajar. Andi adalah siswa. Kesimpulan:",
+    p: [
+      "Andi tidak rajin",
+      "Andi rajin belajar",
+      "Andi kadang rajin",
+      "Tidak dapat disimpulkan",
+    ],
+    j: 1,
+  },
+  {
+    t: "Dokter : Pasien = Guru : ...",
+    p: ["Sekolah", "Murid", "Buku", "Pelajaran"],
+    j: 1,
+  },
+  {
+    t: "Besar : Raksasa = Kecil : ...",
+    p: ["Mini", "Pendek", "Sedikit", "Tipis"],
     j: 0,
   },
   {
-    t: "Baterai : Energi = Paru-paru : ....",
-    p: ["Udara", "Oksigen", "Pernapasan", "Darah", "Hidup"],
+    t: "2, 6, 18, 54, ...",
+    p: ["108", "162", "216", "324"],
     j: 1,
   },
-
-  /* ================= DERET ANGKA (POLA KOMBINASI) ================= */
-
   {
-    t: "2, 5, 11, 23, 47, ....",
-    p: ["90", "92", "94", "95", "97"],
-    j: 3,
+    t: "15 + 25 × 2 = ...",
+    p: ["65", "80", "90", "100"],
+    j: 0,
   },
   {
-    t: "4, 6, 9, 13, 18, ....",
-    p: ["22", "23", "24", "25", "26"],
+    t: "Jika p = 4 dan q = 3 maka 2p + 3q = ...",
+    p: ["17", "18", "19", "20"],
+    j: 0,
+  },
+  {
+    t: "8, 12, 18, 26, ...",
+    p: ["34", "36", "38", "40"],
+    j: 1,
+  },
+  {
+    t: "Sinonim kata 'AKURAT' adalah ...",
+    p: ["Cepat", "Tepat", "Lambat", "Kasar"],
+    j: 1,
+  },
+  {
+    t: "Antonim kata 'OPTIMIS' adalah ...",
+    p: ["Pesimis", "Rajin", "Percaya", "Bahagia"],
+    j: 0,
+  },
+  {
+    t: "Jika semua A adalah B dan semua B adalah C maka ...",
+    p: [
+      "Semua C adalah A",
+      "Semua A adalah C",
+      "Sebagian C adalah A",
+      "Tidak dapat disimpulkan",
+    ],
+    j: 1,
+  },
+  {
+    t: "12, 24, 48, 96, ...",
+    p: ["120", "144", "192", "200"],
     j: 2,
   },
   {
-    t: "3, 9, 8, 24, 23, 69, ....",
-    p: ["66", "67", "68", "70", "72"],
+    t: "1, 3, 6, 10, 15, ...",
+    p: ["20", "21", "22", "24"],
     j: 1,
   },
   {
-    t: "1, 4, 10, 19, 31, ....",
-    p: ["40", "42", "44", "46", "48"],
+    t: "Jika 5 buku harganya Rp25.000 maka harga 1 buku adalah ...",
+    p: ["4000", "5000", "6000", "7000"],
     j: 1,
   },
-
-  /* ================= LOGIKA (SILOGISME BERTINGKAT) ================= */
-
   {
-    t: "Semua mahasiswa rajin. Sebagian mahasiswa atlet. Semua atlet disiplin. Maka ....",
+    t: "Kuda : Lari = Burung : ...",
+    p: ["Terbang", "Melompat", "Berjalan", "Menyelam"],
+    j: 0,
+  },
+  {
+    t: "Sinonim kata 'CEPAT' adalah ...",
+    p: ["Lambat", "Kilat", "Pelan", "Diam"],
+    j: 1,
+  },
+  {
+    t: "7, 14, 28, 56, ...",
+    p: ["84", "96", "112", "120"],
+    j: 2,
+  },
+  {
+    t: "Jika 10 orang menyelesaikan pekerjaan dalam 5 hari, maka 5 orang menyelesaikan dalam ...",
+    p: ["8 hari", "10 hari", "12 hari", "15 hari"],
+    j: 1,
+  },
+  {
+    t: "Semua bunga indah. Mawar adalah bunga. Kesimpulan:",
     p: [
-      "Sebagian mahasiswa disiplin",
-      "Semua mahasiswa disiplin",
-      "Tidak ada mahasiswa disiplin",
-      "Semua disiplin mahasiswa",
+      "Mawar tidak indah",
+      "Mawar indah",
+      "Mawar kadang indah",
+      "Tidak dapat disimpulkan",
+    ],
+    j: 1,
+  },
+  {
+    t: "Air : Haus = Makan : ...",
+    p: ["Kenyang", "Lapar", "Minum", "Tidur"],
+    j: 1,
+  },
+  {
+    t: "3, 5, 9, 17, 33, ...",
+    p: ["49", "57", "65", "81"],
+    j: 2,
+  },
+  {
+    t: "Jika 2x = 16 maka x = ...",
+    p: ["6", "7", "8", "9"],
+    j: 2,
+  },
+  {
+    t: "25% dari 400 adalah ...",
+    p: ["50", "75", "100", "125"],
+    j: 2,
+  },
+  {
+    t: "1, 4, 7, 10, ...",
+    p: ["12", "13", "14", "15"],
+    j: 1,
+  },
+  {
+    t: "Sinonim 'CERDAS' adalah ...",
+    p: ["Pintar", "Bodoh", "Lambat", "Malas"],
+    j: 0,
+  },
+  {
+    t: "Antonim 'TINGGI' adalah ...",
+    p: ["Pendek", "Besar", "Kecil", "Panjang"],
+    j: 0,
+  },
+  {
+    t: "6, 11, 16, 21, ...",
+    p: ["24", "25", "26", "27"],
+    j: 2,
+  },
+  {
+    t: "Jika 4x = 20 maka x = ...",
+    p: ["4", "5", "6", "7"],
+    j: 1,
+  },
+  {
+    t: "Semua dokter pintar. Budi dokter. Maka ...",
+    p: [
+      "Budi tidak pintar",
+      "Budi pintar",
+      "Budi mungkin pintar",
+      "Tidak dapat disimpulkan",
+    ],
+    j: 1,
+  },
+  {
+    t: "Besi : Keras = Kapas : ...",
+    p: ["Ringan", "Berat", "Padat", "Kasar"],
+    j: 0,
+  },
+  {
+    t: "5, 10, 20, 40, ...",
+    p: ["60", "70", "80", "90"],
+    j: 2,
+  },
+  {
+    t: "Jika jarak 180 km ditempuh 3 jam maka kecepatan adalah ...",
+    p: ["40", "50", "60", "70"],
+    j: 2,
+  },
+  {
+    t: "2, 5, 10, 17, ...",
+    p: ["24", "25", "26", "27"],
+    j: 2,
+  },
+  {
+    t: "Sinonim 'SULIT' adalah ...",
+    p: ["Mudah", "Sukar", "Cepat", "Ringan"],
+    j: 1,
+  },
+  {
+    t: "Antonim 'MAJU' adalah ...",
+    p: ["Depan", "Mundur", "Naik", "Turun"],
+    j: 1,
+  },
+  {
+    t: "3, 6, 12, 24, ...",
+    p: ["36", "42", "48", "54"],
+    j: 2,
+  },
+  {
+    t: "Jika x + y = 12 dan x = 7 maka y = ...",
+    p: ["3", "4", "5", "6"],
+    j: 2,
+  },
+  {
+    t: "1, 2, 4, 7, 11, ...",
+    p: ["15", "16", "17", "18"],
+    j: 1,
+  },
+  {
+    t: "Guru : Sekolah = Dokter : ...",
+    p: ["Rumah", "Rumah sakit", "Pasien", "Obat"],
+    j: 1,
+  },
+  {
+    t: "Sinonim 'INDAH' adalah ...",
+    p: ["Buruk", "Cantik", "Kotor", "Gelap"],
+    j: 1,
+  },
+  {
+    t: "Antonim 'RAMAI' adalah ...",
+    p: ["Sepi", "Bising", "Banyak", "Padat"],
+    j: 0,
+  },
+  {
+    t: "4, 9, 16, 25, ...",
+    p: ["30", "35", "36", "40"],
+    j: 2,
+  },
+  {
+    t: "Jika 8 pekerja menyelesaikan pekerjaan dalam 6 hari maka 4 pekerja menyelesaikan dalam ...",
+    p: ["10 hari", "12 hari", "14 hari", "16 hari"],
+    j: 1,
+  },
+  {
+    t: "2, 3, 5, 8, 13, ...",
+    p: ["18", "19", "20", "21"],
+    j: 3,
+  },
+  {
+    t: "Semua ikan hidup di air. Lele adalah ikan. Kesimpulan:",
+    p: [
+      "Lele hidup di air",
+      "Lele hidup di darat",
+      "Lele tidak hidup",
       "Tidak dapat disimpulkan",
     ],
     j: 0,
   },
   {
-    t: "Semua A adalah B. Sebagian B adalah C. Sebagian C adalah D. Maka ....",
-    p: [
-      "Sebagian A adalah D",
-      "A mungkin D",
-      "Semua A adalah D",
-      "Tidak ada A adalah D",
-      "Tidak dapat disimpulkan",
-    ],
-    j: 1,
+    t: "Sinonim 'BESAR' adalah ...",
+    p: ["Agung", "Kecil", "Pendek", "Tipis"],
+    j: 0,
   },
   {
-    t: "Jika lampu menyala maka listrik aktif. Listrik aktif. Maka ....",
-    p: [
-      "Lampu pasti menyala",
-      "Lampu mungkin menyala",
-      "Lampu tidak menyala",
-      "Listrik tidak aktif",
-      "Tidak dapat disimpulkan",
-    ],
-    j: 1,
-  },
-  {
-    t: "Semua pegawai disiplin. Tidak semua disiplin tepat waktu. Maka ....",
-    p: [
-      "Semua pegawai tepat waktu",
-      "Sebagian pegawai tidak tepat waktu",
-      "Tidak ada pegawai tepat waktu",
-      "Semua tepat waktu pegawai",
-      "Tidak dapat disimpulkan",
-    ],
-    j: 4,
-  },
-
-  /* ================= ARITMATIKA (MULTI STEP) ================= */
-
-  {
-    t: "Nilai dari (36 ÷ 6) × (8 + 4) − 10 adalah ....",
-    p: ["50", "56", "60", "62", "66"],
-    j: 2,
-  },
-  {
-    t: "Jika 3x + 2 = 20 maka nilai x adalah ....",
-    p: ["4", "5", "6", "7", "8"],
-    j: 2,
-  },
-  {
-    t: "Harga sebuah barang setelah diskon 25% adalah Rp150.000. Harga sebelum diskon adalah ....",
-    p: ["Rp180.000", "Rp190.000", "Rp200.000", "Rp210.000", "Rp220.000"],
-    j: 2,
-  },
-  {
-    t: "Sebuah mobil menempuh 180 km dalam 3 jam. Jika kecepatannya bertambah 20 km/jam, waktu untuk menempuh jarak yang sama adalah ....",
-    p: ["1,8 jam", "2 jam", "2,25 jam", "2,5 jam", "3 jam"],
-    j: 2,
-  },
-
-  /* ================= PENALARAN KUANTITATIF & PENGETAHUAN DASAR ================= */
-
-  {
-    t: "Jika peluang hujan hari ini 0,3 maka peluang tidak hujan adalah ....",
-    p: ["0,3", "0,5", "0,6", "0,7", "0,8"],
-    j: 3,
-  },
-  {
-    t: "Sudut terkecil antara jarum jam pada pukul 04.00 adalah ....",
-    p: ["90°", "100°", "110°", "120°", "130°"],
-    j: 3,
-  },
-  {
-    t: "Jumlah sudut dalam segitiga adalah ....",
-    p: ["90°", "120°", "180°", "270°", "360°"],
-    j: 2,
-  },
-  {
-    t: "Bilangan prima setelah 29 adalah ....",
-    p: ["30", "31", "33", "35", "37"],
-    j: 1,
+    t: "Antonim 'PANAS' adalah ...",
+    p: ["Dingin", "Hangat", "Kering", "Basah"],
+    j: 0,
   },
 ];
 
